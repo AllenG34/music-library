@@ -5,7 +5,7 @@ export default function ArtistView() {
     const { id } = useParams();
     const [artistData, setArtistData] = useState([]);
     
-    useEffect(() => {
+  //  useEffect(() => {
         const API_URL = `http://localhost:4000/album/${id}`;
         const fetchData = async () => {
             const response = await fetch(API_URL);
@@ -13,10 +13,10 @@ export default function ArtistView() {
             console.log(resData);
         }
         fetchData();
-    }, [id]);
-    
+ //   }, [id]);
+
     return <div>
-        <h2>The id passed is: { id }</h2>
+        <h2>The id passed is: {id}</h2>
         <p>Artist Data Goes Here</p>
     </div>
 }
